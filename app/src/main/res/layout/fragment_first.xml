@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <TextView
+        android:id="@+id/textview_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/hello_first_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        app:backgroundTint="#6BA56D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridlayout"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="false"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18">
+
+        <EditText
+            android:id="@+id/row3col3"
+            android:layout_width="100dp"
+            android:layout_height="46dp"
+            android:autofillHints="text"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="text"
+            android:textColorHint="#555454"
+            android:textSize="12sp"
+            app:layout_column="3"
+            app:layout_gravity="top"
+            app:layout_row="3"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/row3col2"
+            android:layout_width="88dp"
+            android:layout_height="46dp"
+            android:autofillHints="text"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="text"
+            android:textColorHint="#555454"
+            android:textSize="12sp"
+            app:layout_column="2"
+            app:layout_gravity="top"
+            app:layout_row="3"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/row3col1"
+            android:layout_width="125dp"
+            android:layout_height="46dp"
+            android:autofillHints="text"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="text"
+            android:textColorHint="#555454"
+            android:textSize="12sp"
+            app:layout_column="1"
+            app:layout_gravity="top"
+            app:layout_row="3"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="76dp"
+            android:layout_height="46dp"
+            android:gravity="center_vertical"
+            android:text="@string/course4"
+            app:layout_column="0"
+            app:layout_gravity="top"
+            app:layout_row="3" />
+
+        <EditText
+            android:id="@+id/row2col3"
+            android:layout_width="100dp"
+            android:layout_height="46dp"
+            android:autofillHints="text"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="text"
+            android:textColorHint="#555454"
+            android:textSize="12sp"
+            app:layout_column="3"
+            app:layout_gravity="top"
+            app:layout_row="2"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/row2col2"
+            android:layout_width="88dp"
+            android:layout_height="46dp"
+            android:autofillHints="text"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="text"
+            android:textColorHint="#555454"
+            android:textIsSelectable="true"
+            android:textSize="12sp"
+            app:layout_column="2"
+            app:layout_gravity="top"
+            app:layout_row="2"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/row2col1"
+            android:layout_width="125dp"
+            android:layout_height="46dp"
+            android:autofillHints="text"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="text"
+            android:textColorHint="#555454"
+            android:textSize="12sp"
+            app:layout_column="1"
+            app:layout_gravity="top"
+            app:layout_row="2"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="76dp"
+            android:layout_height="46dp"
+            android:gravity="center_vertical"
+            android:text="@string/course1"
+            app:layout_column="0"
+            app:layout_gravity="top"
+            app:layout_row="0" />
+
+        <EditText
+            android:id="@+id/row0col1"
+            android:layout_width="125dp"
+            android:layout_height="46dp"
+            android:autofillHints="text"
+            android:gravity="center_horizontal"
+            android:inputType="text"
+            android:textColorHint="#555454"
+            android:textSize="12sp"
+            app:layout_column="1"
+            app:layout_gravity="top"
+            app:layout_row="0"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/row0col2"
+            android:layout_width="88dp"
+            android:layout_height="46dp"
+            android:autofillHints="text"
+            android:gravity="center_horizontal"
+            android:inputType="text"
+            android:textColorHint="#555454"
+            android:textSize="12sp"
+            app:layout_column="2"
+            app:layout_gravity="top"
+            app:layout_row="0"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/row0col3"
+            android:layout_width="100dp"
+            android:layout_height="46dp"
+            android:autofillHints=""
+            android:gravity="center_horizontal"
+            android:inputType="text"
+            android:textColorHint="#555454"
+            android:textSize="12sp"
+            app:layout_column="3"
+            app:layout_gravity="top"
+            app:layout_row="0"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="76dp"
+            android:layout_height="46dp"
+            android:gravity="center_vertical"
+            android:text="@string/course2"
+            app:layout_column="0"
+            app:layout_gravity="top"
+            app:layout_row="1" />
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="76dp"
+            android:layout_height="46dp"
+            android:gravity="center_vertical"
+            android:text="@string/course3"
+            app:layout_column="0"
+            app:layout_gravity="top"
+            app:layout_row="2" />
+
+        <EditText
+            android:id="@+id/row1col1"
+            android:layout_width="125dp"
+            android:layout_height="46dp"
+            android:autofillHints="text"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="text"
+            android:textColorHint="#555454"
+            android:textSize="12sp"
+            app:layout_column="1"
+            app:layout_gravity="top"
+            app:layout_row="1"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/row1col2"
+            android:layout_width="88dp"
+            android:layout_height="46dp"
+            android:autofillHints="text"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="text"
+            android:textColorHint="#555454"
+            android:textSize="12sp"
+            app:layout_gravity="top"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/row1col3"
+            android:layout_width="100dp"
+            android:layout_height="46dp"
+            android:autofillHints="text"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="text"
+            android:textColorHint="#555454"
+            android:textSize="12sp"
+            app:layout_gravity="top"
+            tools:ignore="LabelFor" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/courseheader"
+        android:layout_width="128dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        android:text="@string/coursename"
+        app:layout_constraintBottom_toTopOf="@+id/gridlayout"
+        app:layout_constraintEnd_toStartOf="@+id/creditsheader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_first"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/creditsheader"
+        android:layout_width="88dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        android:text="@string/credits"
+        app:layout_constraintBottom_toTopOf="@+id/gridlayout"
+        app:layout_constraintEnd_toStartOf="@+id/gradeheader"
+        app:layout_constraintTop_toBottomOf="@+id/textview_first"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/gradeheader"
+        android:layout_width="84dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        android:text="@string/lettergrade"
+        app:layout_constraintBottom_toTopOf="@+id/gridlayout"
+        app:layout_constraintStart_toEndOf="@+id/creditsheader"
+        app:layout_constraintTop_toBottomOf="@+id/textview_first"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/help_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/help"
+        app:backgroundTint="#6BA56D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_first"
+        app:layout_constraintTop_toBottomOf="@+id/gridlayout"
+        app:layout_constraintVertical_bias="0.049" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
