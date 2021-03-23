@@ -20,8 +20,9 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class FirstFragment extends Fragment {
-    final String DEAN = "You are on the Dean\'s List!";
-    final String DEAN_HIGH = "You are on the Dean\'s List with High Honors!";
+    final String AVG = "";
+    final String DEAN = "You are on the Dean's List!";
+    final String DEAN_HIGH = "You are on the Dean's List with High Honors!";
     final String PROBATION = "You will be placed on Academic Probation";
     boolean creditIssue = false;
     boolean courseIssue = false;
@@ -87,12 +88,13 @@ public class FirstFragment extends Fragment {
                         creditIssue = true;
                     }
                     //checking if the course name col has empty cells
-//                    ArrayList<EditText> col3 = new ArrayList<>();
-//                    col3.add(row0col3);
-//                    col3.add(row1col3);
-//                    col3.add(row2col3);
-//                    col3.add(row3col3);
-//                    checkCol3(col3);
+                    ArrayList<EditText> col1 = new ArrayList<>();
+                    col1.add(row0col1);
+                    col1.add(row1col1);
+                    col1.add(row2col1);
+                    col1.add(row3col1);
+
+                    checkCol1(col1);
 
                     DecimalFormat df = new DecimalFormat("0.0##");
 
@@ -110,7 +112,8 @@ public class FirstFragment extends Fragment {
                     String gpa_message;
                     if (finalGPA < 2.0) gpa_message = PROBATION;
                     else if (finalGPA >= 3.7) gpa_message = DEAN_HIGH;
-                    else gpa_message = DEAN;
+                    else if (finalGPA > 3.2 && finalGPA < 3.7) gpa_message = DEAN;
+                    else gpa_message = AVG;
 
                     //final gpa message
                     Snackbar.make(view, "GPA: " + df.format(finalGPA) + "\n" + gpa_message, Snackbar.LENGTH_LONG)
@@ -118,11 +121,6 @@ public class FirstFragment extends Fragment {
 
                 } catch (NullPointerException e) {
                     row2col2.onEditorAction(EditorInfo.IME_ACTION_DONE);
-                    if (courseIssue) {
-                        Snackbar.make(view, "yeeeeet", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-
-                    }
                     Snackbar.make(view, "Course information missing, please fill in all sections", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
 
@@ -198,20 +196,22 @@ public class FirstFragment extends Fragment {
         return credit * grade_points_earned;
     }
 
-    void checkCol3(ArrayList<EditText> text) throws Exception {
+    /**
+     * Helper method to check for missing information in column 1, separate
+     * method because the only possible error is pointing to empty cell
+     *
+     * @param col1 ArrayList of EditText components representing column 1
+     * @throws NullPointerException thrown if any of the cells in col1 are empty
+     */
+    void checkCol1(ArrayList<EditText> col1) throws NullPointerException {
         String current;
-        for(int i =0; i<4;i++){
-            current = text.get(i).toString();
+        for (int i = 0; i < 4; i++) {
+            current = col1.get(i).getText().toString();
             //if empty
-            if (current.matches("")) {
+            if (current.equals("")) {
                 throw new NullPointerException("missing info");
             }
-//            text.remove(text.get(i));
-//            for(int j =0; j<text.size();j++){
-//                if(text.get(i).getText().toString().equals(current)){
-//                   throw new Exception("duplicate");
-//                }
-//            }
+
 
         }
 
